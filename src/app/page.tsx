@@ -1,19 +1,26 @@
 
 import { Button } from "@/components/ui/button";
 import { SignedIn,SignedOut,SignUpButton,SignOutButton} from '@clerk/nextjs'
+import Hero from "@/components/landing/Hero";
+import Header from "@/components/landing/Header";
+import CTA from "@/components/landing/CTA";
+import Footer from "@/components/landing/Footer";
+import HowItWorks from "@/components/landing/HowItWorks";
+import PricingSection from "@/components/landing/PricingSection";
+import WhatToAsk from "@/components/landing/WhatToAsk";
+
+
+
 export default function Home() {
-  return <div className="">
-      <h1>Home Page</h1>
+  return <div className="min-h-screen bg-background">
       
-
-      <SignedOut>
-          <SignUpButton>SignUp</SignUpButton>
-      </SignedOut>
-
-      <SignedIn>
-        <SignOutButton>Logout</SignOutButton>
-      </SignedIn>
-
+   <Header />
+   <Hero />
+   <HowItWorks />
+   <WhatToAsk/>
+   <PricingSection />
+   <CTA />
+   <Footer />
   </div>
   
   
