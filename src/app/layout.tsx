@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import {UserSync} from "@/components/UserSync"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
+        <UserSync />
         {children}
       </body>
     </html>
