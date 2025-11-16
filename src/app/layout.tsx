@@ -10,6 +10,7 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
+import TansStackProvider from "@/components/providers/TanStackProvider";
 
 
 const geistSans = Geist({
@@ -33,6 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <TansStackProvider>
     <ClerkProvider 
        appearance={{
           variables: {
@@ -52,5 +54,6 @@ export default function RootLayout({
       </body>
     </html>
     </ClerkProvider>
+    </TansStackProvider>
   );
 }
