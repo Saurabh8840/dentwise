@@ -14,7 +14,7 @@ export function AdminDashboardClient(){
     const {data:doctors=[],isLoading:doctorsLoading}=useGetDoctors();
     const {data:appointments=[],isLoading:appointmentLoading}=useGetAppointments();
 
-
+   
     const stats={
         totalDoctors:doctors.length,
         activeDoctors:doctors.filter((doc)=>doc.isActive).length,
