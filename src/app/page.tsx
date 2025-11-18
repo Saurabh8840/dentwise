@@ -10,6 +10,7 @@ import PricingSection from "@/components/landing/PricingSection";
 import WhatToAsk from "@/components/landing/WhatToAsk";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import { syncUser } from "@/lib/actions/users";
 
 
 export default async  function Home() {
@@ -17,6 +18,8 @@ export default async  function Home() {
   
 
   const user=await currentUser()
+
+  await syncUser();
   if(user)redirect("/dashboard")
 
   return <div className="min-h-screen bg-background">
