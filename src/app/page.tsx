@@ -14,11 +14,8 @@ import { syncUser } from "@/lib/actions/users";
 
 
 export default async  function Home() {
-  
-  
-
   const user=await currentUser()
-
+  //the best way of syncing =>webhooks
   await syncUser();
   if(user)redirect("/dashboard")
 
