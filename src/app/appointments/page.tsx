@@ -63,16 +63,19 @@ function AppointmentsPage() {
               body: JSON.stringify({
                 userEmail: appointment.patientEmail,
                 doctorName: appointment.doctorName,
+                
                 appointmentDate: format(new Date(appointment.date), "EEEE, MMMM d, yyyy"),
                 appointmentTime: appointment.time,
                 appointmentType: appointmentType?.name,
                 duration: appointmentType?.duration,
+
                 price: appointmentType?.price,
               }),
             });
 
             if (!emailResponse.ok) console.error("Failed to send confirmation email");
           } catch (error) {
+
             console.error("Error sending confirmation email:", error);
           }
 
