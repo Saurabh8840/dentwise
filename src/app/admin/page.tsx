@@ -4,7 +4,8 @@ import AdminDashboardClient from "./AdminDashboardClient";
 
 async function AdminPage(){
     const user=await currentUser();
-
+     
+    
 
     if(!user) redirect("/");
     

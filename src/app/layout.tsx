@@ -49,7 +49,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        {/* //this is done in home page component */}
         {/* <UserSync /> */}
         {children}
       </body>
