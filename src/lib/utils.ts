@@ -14,7 +14,7 @@ export function generateAvatar(name: string, gender: "MALE" | "FEMALE") {
 }
 
 // phone formatting function for US numbers - ai generated 🎉
-export const formatIndianPhoneNumber = (value: string) => {
+export const formatPhoneNumber = (value: string) => {
   if (!value) return value;
 
   // Remove anything not a digit

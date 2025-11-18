@@ -166,6 +166,7 @@ export async function bookAppointment(input: BookAppointmentInput) {
 
 export async function updateAppointmentStatus(input: { id: string; status: AppointmentStatus }) {
   try {
+    
     const appointment = await prisma.appointment.update({
       where: { id: input.id },
       data: { status: input.status },
@@ -177,3 +178,5 @@ export async function updateAppointmentStatus(input: { id: string; status: Appoi
     throw new Error("Failed to update appointment");
   }
 }
+
+

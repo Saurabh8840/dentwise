@@ -49,12 +49,15 @@ export function useUserAppointments() {
 }
 
 export function useUpdateAppointmentStatus() {
+
+
   const queryClient = useQueryClient();
 
   return useMutation({
+    
     mutationFn: updateAppointmentStatus,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["getAppointments"] });
+      queryClient.invalidateQueries({ queryKey: [ "getAppointments"] });
     },
     onError: (error) => console.error("Failed to update appointment:", error),
   });
